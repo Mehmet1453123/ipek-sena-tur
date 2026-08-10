@@ -4,220 +4,938 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>İpek Sena Tur | Güvenilir Umre Turları</title>
-<meta name="description" content="İpek Sena Tur ile güvenli, konforlu ve huzurlu umre yolculuğunuzu planlayın. Umre paketleri, konaklama, ulaşım, transfer ve rehberlik hizmetleri.">
+<meta name="description" content="İpek Sena Tur ile güvenli, konforlu ve huzurlu umre yolculuğunuzu planlayın.">
 <meta name="theme-color" content="#8b6b2e">
+
 <style>
-:root{--gold:#b18a3b;--gold2:#d1ad63;--cream:#f7f1e5;--dark:#222018;--white:#fff;--muted:#6e6a60;--line:#e8dfcf}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:Georgia,"Times New Roman",serif;background:var(--cream);color:var(--dark);line-height:1.6}
- <img src="./logo.png" alt="İpek Sena Tur"  style="width:90px;height:60px;object-fit:contain;">
-a{text-decoration:none;color:inherit}
-.container{width:min(1120px,92%);margin:auto}
-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}
-.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.logo{font-size:25px;font-weight:700;letter-spacing:.5px;color:var(--dark)}
-.logo span{display:block;font:12px Arial,sans-serif;letter-spacing:2px;color:var(--gold);text-transform:uppercase}
-nav{display:flex;gap:26px;font:15px Arial,sans-serif}
-nav a{padding:8px 0}
-nav a:hover{color:var(--gold)}
-.menu{display:none;border:0;background:none;font-size:28px;cursor:pointer}
-.hero{min-height:590px;display:grid;place-items:center;text-align:center;padding:90px 20px;background:linear-gradient(rgba(35,31,20,.68),rgba(35,31,20,.72)),radial-gradient(circle at center,#d6bd86,#6e572d);color:#fff}
-.hero-inner{max-width:820px}
-.eyebrow{font:13px Arial,sans-serif;letter-spacing:3px;text-transform:uppercase;color:#ead5a0;margin-bottom:16px}
-h1{font-size:clamp(40px,7vw,70px);line-height:1.05;margin-bottom:22px}
-.hero p{font-size:20px;max-width:720px;margin:0 auto 30px;color:#f8f5ed}
-.btn{display:inline-block;padding:14px 24px;border-radius:4px;background:var(--gold);color:#fff;font:bold 14px Arial,sans-serif;border:1px solid var(--gold);transition:.2s}
-.btn:hover{background:#95722f;transform:translateY(-1px)}
-.btn.light{background:#fff;color:var(--dark);border-color:#fff}
-section{padding:82px 0}
-.section-head{text-align:center;max-width:720px;margin:0 auto 40px}
-.section-head .eyebrow{color:var(--gold)}
-h2{font-size:38px;line-height:1.15;margin-bottom:12px}
-.section-head p{font:16px Arial,sans-serif;color:var(--muted)}
-.packages{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:30px;box-shadow:0 10px 30px rgba(50,40,20,.07);display:flex;flex-direction:column}
-.card.featured{border:2px solid var(--gold);transform:translateY(-5px)}
-.badge{font:11px Arial,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
-.card h3{font-size:25px;margin-bottom:6px}
-.duration{font:bold 14px Arial,sans-serif;color:var(--gold);margin-bottom:20px}
-.card ul{list-style:none;margin:0 0 26px;flex:1}
-.card li{font:15px Arial,sans-serif;padding:9px 0;border-bottom:1px solid #f0eadf}
-.card li::before{content:"✓";color:var(--gold);font-weight:bold;margin-right:10px}
-.card .btn{width:100%;text-align:center}
-.about{background:#fff}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
-.about-box{padding:35px;border:1px solid var(--line);background:var(--cream)}
-.about h2{margin-bottom:20px}
-.about p{font:16px Arial,sans-serif;color:#555;margin-bottom:15px}
-.features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:25px}
-.feature{padding:20px;background:#fff;border:1px solid var(--line);text-align:center}
-.feature strong{display:block;font-size:18px;margin-bottom:6px}
-.feature span{font:13px Arial,sans-serif;color:var(--muted)}
-.contact{background:var(--dark);color:#fff}
-.contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:45px}
-.contact .section-head{text-align:left;margin:0 0 25px}
-.contact .section-head p{color:#c8c4b9}
-.contact-info{font:15px Arial,sans-serif}
-.contact-item{padding:14px 0;border-bottom:1px solid rgba(255,255,255,.12)}
-.contact-item b{display:block;color:#d9bd7c;margin-bottom:3px}
-.contact-item a:hover{color:#d9bd7c}
-form{background:#fff;color:var(--dark);padding:28px;border-radius:8px}
-.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.field{display:flex;flex-direction:column;gap:7px}
-.field.full{grid-column:1/-1}
-label{font:bold 13px Arial,sans-serif}
-input,textarea{width:100%;padding:13px 14px;border:1px solid #ddd4c5;border-radius:4px;font:14px Arial,sans-serif;background:#fff}
-textarea{min-height:130px;resize:vertical}
-input:focus,textarea:focus{outline:2px solid rgba(177,138,59,.2);border-color:var(--gold)}
-.status{display:none;margin-top:14px;padding:12px;border-radius:4px;font:14px Arial,sans-serif}
-.status.ok{display:block;background:#eaf6ed;color:#236234}
-.status.err{display:block;background:#fff0ef;color:#9a3028}
-footer{background:#171610;color:#d8d3c8;padding:42px 0 22px}
-.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px}
-footer h3{color:#fff;font-size:20px;margin-bottom:12px}
-footer h4{color:#d9bd7c;font:700 13px Arial,sans-serif;margin-bottom:12px;text-transform:uppercase;letter-spacing:1px}
-footer p,footer a{font:14px Arial,sans-serif;color:#aaa69d}
-footer a{display:block;margin:7px 0}
-footer a:hover{color:#d9bd7c}
-.copyright{border-top:1px solid rgba(255,255,255,.1);margin-top:30px;padding-top:18px;text-align:center;font:12px Arial,sans-serif;color:#817d74}
-.whatsapp{position:fixed;right:20px;bottom:20px;z-index:100;background:#218c4b;color:#fff;border-radius:30px;padding:13px 18px;box-shadow:0 8px 25px rgba(0,0,0,.22);font:bold 14px Arial,sans-serif}
-.whatsapp:hover{background:#18733d}
-@media(max-width:800px){
- nav{display:none;position:absolute;top:76px;left:0;right:0;background:#fff;padding:15px 5%;flex-direction:column;gap:4px;border-bottom:1px solid var(--line)}
- nav.open{display:flex}.menu{display:block}.packages,.features{grid-template-columns:1fr}.card.featured{transform:none}.about-grid,.contact-grid{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr}.hero{min-height:520px}section{padding:60px 0}
+:root{
+--gold:#b18a3b;
+--gold2:#d1ad63;
+--cream:#f7f1e5;
+--dark:#222018;
+--white:#fff;
+--muted:#6e6a60;
+--line:#e8dfcf
 }
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0
+}
+
+html{
+scroll-behavior:smooth
+}
+
+body{
+font-family:Georgia,"Times New Roman",serif;
+background:var(--cream);
+color:var(--dark);
+line-height:1.6
+}
+
+a{
+text-decoration:none;
+color:inherit
+}
+
+.container{
+width:min(1120px,92%);
+margin:auto
+}
+
+header{
+position:sticky;
+top:0;
+z-index:50;
+background:rgba(255,255,255,.96);
+border-bottom:1px solid var(--line);
+backdrop-filter:blur(10px)
+}
+
+.nav{
+min-height:76px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:20px
+}
+
+/* LOGO */
+.logo-area{
+display:flex;
+align-items:center;
+gap:12px
+}
+
+.site-logo{
+width:70px;
+height:55px;
+object-fit:contain;
+display:block
+}
+
+.logo{
+font-size:25px;
+font-weight:700;
+letter-spacing:.5px;
+color:var(--dark)
+}
+
+.logo span{
+display:block;
+font:12px Arial,sans-serif;
+letter-spacing:2px;
+color:var(--gold);
+text-transform:uppercase
+}
+
+nav{
+display:flex;
+gap:26px;
+font:15px Arial,sans-serif
+}
+
+nav a{
+padding:8px 0
+}
+
+nav a:hover{
+color:var(--gold)
+}
+
+.menu{
+display:none;
+border:0;
+background:none;
+font-size:28px;
+cursor:pointer
+}
+
+.hero{
+min-height:590px;
+display:grid;
+place-items:center;
+text-align:center;
+padding:90px 20px;
+background:
+linear-gradient(rgba(35,31,20,.68),rgba(35,31,20,.72)),
+radial-gradient(circle at center,#d6bd86,#6e572d);
+color:#fff
+}
+
+.hero-inner{
+max-width:820px
+}
+
+.eyebrow{
+font:13px Arial,sans-serif;
+letter-spacing:3px;
+text-transform:uppercase;
+color:#ead5a0;
+margin-bottom:16px
+}
+
+h1{
+font-size:clamp(40px,7vw,70px);
+line-height:1.05;
+margin-bottom:22px
+}
+
+.hero p{
+font-size:20px;
+max-width:720px;
+margin:0 auto 30px;
+color:#f8f5ed
+}
+
+.btn{
+display:inline-block;
+padding:14px 24px;
+border-radius:4px;
+background:var(--gold);
+color:#fff;
+font:bold 14px Arial,sans-serif;
+border:1px solid var(--gold);
+transition:.2s
+}
+
+.btn:hover{
+background:#95722f;
+transform:translateY(-1px)
+}
+
+section{
+padding:82px 0
+}
+
+.section-head{
+text-align:center;
+max-width:720px;
+margin:0 auto 40px
+}
+
+.section-head .eyebrow{
+color:var(--gold)
+}
+
+h2{
+font-size:38px;
+line-height:1.15;
+margin-bottom:12px
+}
+
+.section-head p{
+font:16px Arial,sans-serif;
+color:var(--muted)
+}
+
+.packages{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:22px
+}
+
+.card{
+background:#fff;
+border:1px solid var(--line);
+border-radius:10px;
+padding:30px;
+box-shadow:0 10px 30px rgba(50,40,20,.07);
+display:flex;
+flex-direction:column
+}
+
+.card.featured{
+border:2px solid var(--gold);
+transform:translateY(-5px)
+}
+
+.badge{
+font:11px Arial,sans-serif;
+letter-spacing:1.5px;
+text-transform:uppercase;
+color:var(--gold);
+margin-bottom:12px
+}
+
+.card h3{
+font-size:25px;
+margin-bottom:6px
+}
+
+.duration{
+font:bold 14px Arial,sans-serif;
+color:var(--gold);
+margin-bottom:20px
+}
+
+.card ul{
+list-style:none;
+margin:0 0 26px;
+flex:1
+}
+
+.card li{
+font:15px Arial,sans-serif;
+padding:9px 0;
+border-bottom:1px solid #f0eadf
+}
+
+.card li::before{
+content:"✓";
+color:var(--gold);
+font-weight:bold;
+margin-right:10px
+}
+
+.card .btn{
+width:100%;
+text-align:center
+}
+
+.about{
+background:#fff
+}
+
+.about-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center
+}
+
+.about-box{
+padding:35px;
+border:1px solid var(--line);
+background:var(--cream)
+}
+
+.about h2{
+margin-bottom:20px
+}
+
+.about p{
+font:16px Arial,sans-serif;
+color:#555;
+margin-bottom:15px
+}
+
+.features{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+margin-top:25px
+}
+
+.feature{
+padding:20px;
+background:#fff;
+border:1px solid var(--line);
+text-align:center
+}
+
+.feature strong{
+display:block;
+font-size:18px;
+margin-bottom:6px
+}
+
+.feature span{
+font:13px Arial,sans-serif;
+color:var(--muted)
+}
+
+.contact{
+background:var(--dark);
+color:#fff
+}
+
+.contact-grid{
+display:grid;
+grid-template-columns:.85fr 1.15fr;
+gap:45px
+}
+
+.contact .section-head{
+text-align:left;
+margin:0 0 25px
+}
+
+.contact .section-head p{
+color:#c8c4b9
+}
+
+.contact-info{
+font:15px Arial,sans-serif
+}
+
+.contact-item{
+padding:14px 0;
+border-bottom:1px solid rgba(255,255,255,.12)
+}
+
+.contact-item b{
+display:block;
+color:#d9bd7c;
+margin-bottom:3px
+}
+
+.contact-item a:hover{
+color:#d9bd7c
+}
+
+form{
+background:#fff;
+color:var(--dark);
+padding:28px;
+border-radius:8px
+}
+
+.form-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:16px
+}
+
+.field{
+display:flex;
+flex-direction:column;
+gap:7px
+}
+
+.field.full{
+grid-column:1/-1
+}
+
+label{
+font:bold 13px Arial,sans-serif
+}
+
+input,textarea{
+width:100%;
+padding:13px 14px;
+border:1px solid #ddd4c5;
+border-radius:4px;
+font:14px Arial,sans-serif;
+background:#fff
+}
+
+textarea{
+min-height:130px;
+resize:vertical
+}
+
+input:focus,textarea:focus{
+outline:2px solid rgba(177,138,59,.2);
+border-color:var(--gold)
+}
+
+.status{
+display:none;
+margin-top:14px;
+padding:12px;
+border-radius:4px;
+font:14px Arial,sans-serif
+}
+
+.status.ok{
+display:block;
+background:#eaf6ed;
+color:#236234
+}
+
+.status.err{
+display:block;
+background:#fff0ef;
+color:#9a3028
+}
+
+footer{
+background:#171610;
+color:#d8d3c8;
+padding:42px 0 22px
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:1.4fr 1fr 1fr 1fr;
+gap:30px
+}
+
+footer h3{
+color:#fff;
+font-size:20px;
+margin-bottom:12px
+}
+
+footer h4{
+color:#d9bd7c;
+font:700 13px Arial,sans-serif;
+margin-bottom:12px;
+text-transform:uppercase;
+letter-spacing:1px
+}
+
+footer p,footer a{
+font:14px Arial,sans-serif;
+color:#aaa69d
+}
+
+footer a{
+display:block;
+margin:7px 0
+}
+
+footer a:hover{
+color:#d9bd7c
+}
+
+.copyright{
+border-top:1px solid rgba(255,255,255,.1);
+margin-top:30px;
+padding-top:18px;
+text-align:center;
+font:12px Arial,sans-serif;
+color:#817d74
+}
+
+.whatsapp{
+position:fixed;
+right:20px;
+bottom:20px;
+z-index:100;
+background:#218c4b;
+color:#fff;
+border-radius:30px;
+padding:13px 18px;
+box-shadow:0 8px 25px rgba(0,0,0,.22);
+font:bold 14px Arial,sans-serif
+}
+
+.whatsapp:hover{
+background:#18733d
+}
+
+@media(max-width:800px){
+
+nav{
+display:none;
+position:absolute;
+top:76px;
+left:0;
+right:0;
+background:#fff;
+padding:15px 5%;
+flex-direction:column;
+gap:4px;
+border-bottom:1px solid var(--line)
+}
+
+nav.open{
+display:flex
+}
+
+.menu{
+display:block
+}
+
+.packages,.features{
+grid-template-columns:1fr
+}
+
+.card.featured{
+transform:none
+}
+
+.about-grid,.contact-grid{
+grid-template-columns:1fr
+}
+
+.footer-grid{
+grid-template-columns:1fr 1fr
+}
+
+.hero{
+min-height:520px
+}
+
+section{
+padding:60px 0
+}
+}
+
 @media(max-width:520px){
- .nav{height:68px}.logo{font-size:21px}nav{top:68px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.whatsapp{right:12px;bottom:12px;font-size:13px;padding:12px 15px}h2{font-size:31px}.hero p{font-size:17px}.footer-grid{grid-template-columns:1fr}
+
+.nav{
+min-height:68px
+}
+
+.site-logo{
+width:55px;
+height:48px
+}
+
+.logo{
+font-size:21px
+}
+
+nav{
+top:68px
+}
+
+.form-grid{
+grid-template-columns:1fr
+}
+
+.field.full{
+grid-column:auto
+}
+
+.whatsapp{
+right:12px;
+bottom:12px;
+font-size:13px;
+padding:12px 15px
+}
+
+h2{
+font-size:31px
+}
+
+.hero p{
+font-size:17px
+}
+
+.footer-grid{
+grid-template-columns:1fr
+}
 }
 </style>
 </head>
+
 <body>
+
 <header>
 <div class="container nav">
-<a href="#anasayfa" class="logo">İpek Sena Tur<span>Umre & Turizm</span></a>
-<button class="menu" aria-label="Menüyü aç/kapat" onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
+
+<div class="logo-area">
+
+<a href="#anasayfa">
+<img src="logo.png" alt="İpek Sena Tur" class="site-logo">
+</a>
+
+<a href="#anasayfa" class="logo">
+İpek Sena Tur
+<span>Umre & Turizm</span>
+</a>
+
+</div>
+
+<button class="menu" aria-label="Menüyü aç/kapat" onclick="document.querySelector('nav').classList.toggle('open')">
+☰
+</button>
+
 <nav>
 <a href="#anasayfa">Ana Sayfa</a>
 <a href="#paketler">Umre Paketleri</a>
 <a href="#hakkimizda">Hakkımızda</a>
 <a href="#iletisim">İletişim</a>
 </nav>
+
 </div>
 </header>
 
 <main>
+
 <section class="hero" id="anasayfa">
 <div class="hero-inner">
+
 <div class="eyebrow">İpek Sena Tur</div>
+
 <h1>Huzurlu Bir Umre Yolculuğu</h1>
-<p>Güvenli, konforlu ve özenli bir umre yolculuğu için konaklama, ulaşım, transfer ve rehberlik hizmetlerini birlikte planlıyoruz.</p>
+
+<p>
+Güvenli, konforlu ve özenli bir umre yolculuğu için
+konaklama, ulaşım, transfer ve rehberlik hizmetlerini
+birlikte planlıyoruz.
+</p>
+
 <a class="btn" href="#paketler">Umre Paketlerini İncele</a>
+
 </div>
 </section>
 
 <section id="paketler">
 <div class="container">
+
 <div class="section-head">
 <div class="eyebrow">Umre Paketlerimiz</div>
 <h2>Size Uygun Paketi Seçin</h2>
-<p>İhtiyaçlarınıza göre hazırlanan umre paketlerimiz hakkında detaylı bilgi almak için bizimle iletişime geçebilirsiniz.</p>
+<p>
+İhtiyaçlarınıza göre hazırlanan umre paketlerimiz hakkında
+detaylı bilgi almak için bizimle iletişime geçebilirsiniz.
+</p>
 </div>
+
 <div class="packages">
+
 <article class="card">
-<div class="badge">Ekonomik</div><h3>Ekonomik Umre Paketi</h3><div class="duration">7 Gece / 8 Gün</div>
-<ul><li>Mekke ve Medine konaklama</li><li>Uçak bileti</li><li>Transfer</li><li>Rehberlik</li></ul>
-<a class="btn" href="#iletisim" onclick="setSubject('Ekonomik Umre Paketi')">Fiyat ve Detaylı Bilgi Al</a>
+
+<div class="badge">Ekonomik</div>
+<h3>Ekonomik Umre Paketi</h3>
+<div class="duration">7 Gece / 8 Gün</div>
+
+<ul>
+<li>Mekke ve Medine konaklama</li>
+<li>Uçak bileti</li>
+<li>Transfer</li>
+<li>Rehberlik</li>
+</ul>
+
+<a class="btn" href="#iletisim" onclick="setSubject('Ekonomik Umre Paketi')">
+Fiyat ve Detaylı Bilgi Al
+</a>
+
 </article>
+
 <article class="card featured">
-<div class="badge">Öne Çıkan</div><h3>Standart Umre Paketi</h3><div class="duration">10 Gece / 11 Gün</div>
-<ul><li>Mekke ve Medine konaklama</li><li>Uçak bileti</li><li>Transfer</li><li>Rehberlik</li></ul>
-<a class="btn" href="#iletisim" onclick="setSubject('Standart Umre Paketi')">Fiyat ve Detaylı Bilgi Al</a>
+
+<div class="badge">Öne Çıkan</div>
+<h3>Standart Umre Paketi</h3>
+<div class="duration">10 Gece / 11 Gün</div>
+
+<ul>
+<li>Mekke ve Medine konaklama</li>
+<li>Uçak bileti</li>
+<li>Transfer</li>
+<li>Rehberlik</li>
+</ul>
+
+<a class="btn" href="#iletisim" onclick="setSubject('Standart Umre Paketi')">
+Fiyat ve Detaylı Bilgi Al
+</a>
+
 </article>
+
 <article class="card">
-<div class="badge">Konfor</div><h3>Konforlu Umre Paketi</h3><div class="duration">14 Gece / 15 Gün</div>
-<ul><li>Harem'e yakın konaklama</li><li>Uçak bileti</li><li>Özel transfer</li><li>Rehberlik</li></ul>
-<a class="btn" href="#iletisim" onclick="setSubject('Konforlu Umre Paketi')">Fiyat ve Detaylı Bilgi Al</a>
+
+<div class="badge">Konfor</div>
+<h3>Konforlu Umre Paketi</h3>
+<div class="duration">14 Gece / 15 Gün</div>
+
+<ul>
+<li>Harem'e yakın konaklama</li>
+<li>Uçak bileti</li>
+<li>Özel transfer</li>
+<li>Rehberlik</li>
+</ul>
+
+<a class="btn" href="#iletisim" onclick="setSubject('Konforlu Umre Paketi')">
+Fiyat ve Detaylı Bilgi Al
+</a>
+
 </article>
+
 </div>
 </div>
 </section>
 
 <section class="about" id="hakkimizda">
 <div class="container about-grid">
+
 <div>
+
 <div class="eyebrow">İpek Sena Tur</div>
+
 <h2>Güven ve Huzurla Planlanan Yolculuklar</h2>
-<p>Umre yolculuğunuzun her aşamasında ihtiyaç duyabileceğiniz hizmetleri bir araya getirerek güvenli ve huzurlu bir seyahat deneyimi sunmayı amaçlıyoruz.</p>
-<p>Konaklama, ulaşım, transfer ve rehberlik süreçlerinde size yardımcı oluyoruz.</p>
+
+<p>
+Umre yolculuğunuzun her aşamasında ihtiyaç duyabileceğiniz
+hizmetleri bir araya getirerek güvenli ve huzurlu bir seyahat
+deneyimi sunmayı amaçlıyoruz.
+</p>
+
+<p>
+Konaklama, ulaşım, transfer ve rehberlik süreçlerinde size
+yardımcı oluyoruz.
+</p>
+
 <div class="features">
-<div class="feature"><strong>Güven</strong><span>Özenli hizmet</span></div>
-<div class="feature"><strong>Konfor</strong><span>Planlı yolculuk</span></div>
-<div class="feature"><strong>Rehberlik</strong><span>Destekli süreç</span></div>
+
+<div class="feature">
+<strong>Güven</strong>
+<span>Özenli hizmet</span>
+</div>
+
+<div class="feature">
+<strong>Konfor</strong>
+<span>Planlı yolculuk</span>
+</div>
+
+<div class="feature">
+<strong>Rehberlik</strong>
+<span>Destekli süreç</span>
+</div>
+
 </div>
 </div>
+
 <div class="about-box">
+
 <h3>Umre yolculuğunuzu birlikte planlayalım.</h3>
-<p style="font:15px Arial,sans-serif;color:#555;margin-top:12px">Paket seçenekleri, fiyatlar ve detaylı bilgi için bizimle iletişime geçebilirsiniz.</p>
-<a class="btn" href="#iletisim" style="margin-top:15px">Bilgi Al</a>
+
+<p style="font:15px Arial,sans-serif;color:#555;margin-top:12px">
+Paket seçenekleri, fiyatlar ve detaylı bilgi için bizimle
+iletişime geçebilirsiniz.
+</p>
+
+<a class="btn" href="#iletisim" style="margin-top:15px">
+Bilgi Al
+</a>
+
 </div>
 </div>
 </section>
 
 <section class="contact" id="iletisim">
+
 <div class="container contact-grid">
+
 <div>
-<div class="section-head"><div class="eyebrow">İletişim</div><h2>Size Yardımcı Olalım</h2><p>Umre paketleri ve hizmetlerimiz hakkında bilgi almak için bize ulaşabilirsiniz.</p></div>
+
+<div class="section-head">
+<div class="eyebrow">İletişim</div>
+<h2>Size Yardımcı Olalım</h2>
+<p>
+Umre paketleri ve hizmetlerimiz hakkında bilgi almak için
+bize ulaşabilirsiniz.
+</p>
+</div>
+
 <div class="contact-info">
-<div class="contact-item"><b>Telefon</b><a href="tel:+905543877171">0 554 387 7171</a></div>
-<div class="contact-item"><b>WhatsApp</b><a href="https://wa.me/905543877171?text=Merhaba%2C%20Umre%20paketleri%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">WhatsApp'tan Bilgi Al</a></div>
-<div class="contact-item"><b>E-posta</b><span>ipeksenatur@gmail.com</span></div>
+
+<div class="contact-item">
+<b>Telefon</b>
+<a href="tel:+905543877171">0 554 387 7171</a>
+</div>
+
+<div class="contact-item">
+<b>WhatsApp</b>
+<a href="https://wa.me/905543877171?text=Merhaba%2C%20Umre%20paketleri%20hakkinda%20bilgi%20almak%20istiyorum" target="_blank" rel="noopener">
+WhatsApp'tan Bilgi Al
+</a>
+</div>
+
+<div class="contact-item">
+<b>E-posta</b>
+<a href="mailto:ipeksenatur@gmail.com">
+ipeksenatur@gmail.com
+</a>
+</div>
+
 </div>
 </div>
+
 <form id="contactForm" novalidate>
+
 <div class="form-grid">
-<div class="field"><label for="name">Ad Soyad</label><input id="name" name="name" required></div>
-<div class="field"><label for="email">E-posta</label><input id="email" name="email" type="email" required></div>
-<div class="field"><label for="phone">Telefon</label><input id="phone" name="phone" type="tel" required></div>
-<div class="field"><label for="subject">Konu</label><input id="subject" name="subject" required></div>
-<div class="field full"><label for="message">Mesaj</label><textarea id="message" name="message" required></textarea></div>
-<div class="field full"><button class="btn" type="submit">Mesaj Gönder</button></div>
+
+<div class="field">
+<label for="name">Ad Soyad</label>
+<input id="name" name="name" required>
 </div>
+
+<div class="field">
+<label for="email">E-posta</label>
+<input id="email" name="email" type="email" required>
+</div>
+
+<div class="field">
+<label for="phone">Telefon</label>
+<input id="phone" name="phone" type="tel" required>
+</div>
+
+<div class="field">
+<label for="subject">Konu</label>
+<input id="subject" name="subject" required>
+</div>
+
+<div class="field full">
+<label for="message">Mesaj</label>
+<textarea id="message" name="message" required></textarea>
+</div>
+
+<div class="field full">
+<button class="btn" type="submit">Mesaj Gönder</button>
+</div>
+
+</div>
+
 <div id="status" class="status" role="status"></div>
+
 </form>
+
 </div>
 </section>
+
 </main>
 
 <footer>
+
 <div class="container">
+
 <div class="footer-grid">
-<div><h3>İpek Sena Tur</h3><p>Güvenilir ve huzurlu umre yolculukları için yanınızdayız.</p></div>
-<div><h4>Hizmetlerimiz</h4><a href="#paketler">Umre Paketleri</a><a href="#paketler">Konaklama</a><a href="#paketler">Transfer</a><a href="#paketler">Rehberlik</a></div>
-<div><h4>Kurumsal</h4><a href="#hakkimizda">Hakkımızda</a><a href="#iletisim">İletişim</a><a href="#anasayfa">Ana Sayfa</a></div>
-<div><h4>Destek</h4><a href="tel:+905543877171">0 554 387 7171</a><a href="mailto:ipeksenatur@gmail.com">ipeksenatur@gmail.com</a><a href="https://wa.me/905543877171" target="_blank" rel="noopener">WhatsApp</a></div>
+
+<div>
+<h3>İpek Sena Tur</h3>
+<p>Güvenilir ve huzurlu umre yolculukları için yanınızdayız.</p>
 </div>
-<div class="copyright">© 2026 İpek Sena Tur. Tüm hakları saklıdır.</div>
+
+<div>
+<h4>Hizmetlerimiz</h4>
+<a href="#paketler">Umre Paketleri</a>
+<a href="#paketler">Konaklama</a>
+<a href="#paketler">Transfer</a>
+<a href="#paketler">Rehberlik</a>
+</div>
+
+<div>
+<h4>Kurumsal</h4>
+<a href="#hakkimizda">Hakkımızda</a>
+<a href="#iletisim">İletişim</a>
+<a href="#anasayfa">Ana Sayfa</a>
+</div>
+
+<div>
+<h4>Destek</h4>
+<a href="tel:+905543877171">0 554 387 7171</a>
+<a href="mailto:ipeksenatur@gmail.com">ipeksenatur@gmail.com</a>
+<a href="https://wa.me/905543877171" target="_blank" rel="noopener">WhatsApp</a>
+</div>
+
+</div>
+
+<div class="copyright">
+© 2026 İpek Sena Tur. Tüm hakları saklıdır.
+</div>
+
 </div>
 </footer>
 
-<a class="whatsapp" href="https://wa.me/905543877171?text=Merhaba%2C%20Umre%20paketleri%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">WhatsApp'tan Bilgi Al</a>
+<a class="whatsapp" href="https://wa.me/905543877171?text=Merhaba%2C%20Umre%20paketleri%20hakkinda%20bilgi%20almak%20istiyorum" target="_blank" rel="noopener">
+WhatsApp'tan Bilgi Al
+</a>
 
 <script>
-function setSubject(value){setTimeout(()=>{document.getElementById('subject').value=value},50)}
+function setSubject(value){
+setTimeout(function(){
+document.getElementById('subject').value=value;
+},50);
+}
+
 document.getElementById('contactForm').addEventListener('submit',function(e){
- e.preventDefault();
- const status=document.getElementById('status');
- const fields=[...this.querySelectorAll('[required]')];
- const invalid=fields.find(x=>!x.value.trim());
- if(invalid){status.className='status err';status.textContent='Lütfen tüm alanları doldurun.';invalid.focus();return}
- const email=document.getElementById('email');
- if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)){status.className='status err';status.textContent='Lütfen geçerli bir e-posta adresi girin.';email.focus();return}
- status.className='status ok';
- status.textContent='Mesajınız hazırlandı. Bu demo sürümünde sunucu bağlantısı olmadığı için form verileri gönderilmedi.';
- this.reset();
+
+e.preventDefault();
+
+const status=document.getElementById('status');
+const fields=[...this.querySelectorAll('[required]')];
+const invalid=fields.find(function(x){
+return !x.value.trim();
 });
-document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>document.querySelector('nav').classList.remove('open')));
+
+if(invalid){
+status.className='status err';
+status.textContent='Lütfen tüm alanları doldurun.';
+invalid.focus();
+return;
+}
+
+const email=document.getElementById('email');
+
+if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)){
+status.className='status err';
+status.textContent='Lütfen geçerli bir e-posta adresi girin.';
+email.focus();
+return;
+}
+
+status.className='status ok';
+status.textContent='Mesajınız hazırlandı. Bu demo sürümünde sunucu bağlantısı olmadığı için form verileri gönderilmedi.';
+
+this.reset();
+
+});
+
+document.querySelectorAll('nav a').forEach(function(a){
+
+a.addEventListener('click',function(){
+document.querySelector('nav').classList.remove('open');
+});
+
+});
 </script>
+
 </body>
 </html>
